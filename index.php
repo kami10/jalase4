@@ -1,18 +1,30 @@
 <?php
 
+use App\Controller\Contact;
+use App\Controller\About;
+use App\Controller\Home;
+use App\Controller\Err;
+
+
+require 'vendor/autoload.php';
+
 $address = $_GET['path'];
 
+$handler = null;
 switch ($address){
     case 'contact':
-        include 'src/Controller/contact.php';
+        $handler = new Contact();
         break;
     case 'about':
-        include 'src/Controller/about.php';
+        $handler = new About();
         break;
     case 'home':
-        include 'src/Controller/home.php';
+        $handler = new Home();
         break;
     default:
-        include 'src/Controller/error.php';
+        $handler = new Err();
         break;
 }
+
+$handler->showPage();
+

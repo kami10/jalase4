@@ -1,3 +1,9 @@
 <?php
 
-echo 'This is contact page!';
+namespace App\Controller;
+
+class Contact{
+    public function showPage(){
+        echo 'This is contact page!';
+    }
+}

@@ -2,8 +2,9 @@
 
 namespace App\Controller;
 
-class About{
+class Err{
     public function showPage(){
-        echo 'This is about page!';
+        echo '404 Not Found!';
     }
 }
+
