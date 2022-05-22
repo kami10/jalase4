@@ -6,7 +6,7 @@ use App\Controller\Home;
 use App\Controller\Err;
 
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $address = $_GET['path'];
 
