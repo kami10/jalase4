@@ -27,4 +27,5 @@ switch ($address){
 }
 
 $handler->showPage();
+$handler->welcome();
 
