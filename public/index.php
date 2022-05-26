@@ -4,6 +4,7 @@ use App\Controller\Contact;
 use App\Controller\About;
 use App\Controller\Home;
 use App\Controller\Err;
+use App\Controller\LoginHandler;
 
 
 require '../vendor/autoload.php';
@@ -20,6 +21,9 @@ switch ($address){
         break;
     case 'home':
         $handler = new Home();
+        break;
+    case 'loginhandler':
+        $handler = new LoginHandler();
         break;
     default:
         $handler = new Err();
